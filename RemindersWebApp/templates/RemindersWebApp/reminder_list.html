@@ -6,8 +6,19 @@
 </head>
 
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <header>
+        <h1><a href="/">Reminders</a></h1>
+    </header>
+
+    {% for reminders in reminder %}
+    <article>
+        <h2><a href="">{{ reminders.reminder_name }}</a></h2>
+        <time>Time: {{reminders.reminder_time}}</time>
+        <p>Reminder Completed: {{reminders.reminder_Completed}}</p>
+
+
+    </article>
+    {% endfor %}
 </body>
 
 </html>

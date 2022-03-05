@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Reminders
 
 
 def reminder_list(request):
-    return render(request, 'RemindersWebApp/reminder_list.html', {})
+    reminder = Reminders.objects.all()
+    return render(request, 'RemindersWebApp/reminder_list.html', {'reminder':reminder})
